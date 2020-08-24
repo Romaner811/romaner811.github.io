@@ -1,0 +1,227 @@
+:root {
+    /* font-family: Veranda, sans-serif; */
+    font-family: monospace;
+    
+    --img-width: 233.352px;
+    --img-height: 175.014px;
+    --block-max-width: 466.704px;
+    --block-border-width: 2px;
+    
+    /*
+        w = 280 * 41.67% = 116.676
+        h = w * 3:4 = 87.507
+        
+        2w = 233.352
+        2h = 175.014
+        
+        4w = 466.704
+    */
+    
+    --global-backcolor: #111;
+    --global-color: #eee;
+    
+    --game-backcolor: #040;
+    --game-color: #0d0;
+    --game-brightcolor: #0f0;
+    
+    /** button: **/
+    --button-color: var(--game-color);
+    --button-bordercolor: var(--button-color);
+    --button-textcolor: var(--global-backcolor);
+    
+    --button-hover-color: var(--game-brightcolor);
+    --button-hover-bordercolor: var(--button-hover-color);
+    --button-hover-textcolor: var(--button-textcolor);
+    
+    --button-active-color: var(--button-hover-textcolor);
+    --button-active-bordercolor: var(--button-hover-color);
+    --button-active-textcolor: var(--button-hover-color);
+}
+
+* {
+    box-sizing: border-box;
+    
+    /* debug *
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgba(90, 90, 90, 0.5);
+    /* /debug */
+}
+
+body {
+    background: var(--global-backcolor);
+    color: var(--global-color);
+}
+
+.game {
+    display: inline-block;
+    
+    margin: 0.2cm;
+    
+    overflow: auto;
+    
+    max-width: var(--block-max-width);
+    
+    text-align: left;
+    
+    background: var(--game-backcolor);
+    color: var(--game-color); 
+    
+    border-style: solid;
+    border-color: var(--game-color);
+    border-width: var(--block-border-width);
+    border-radius: 1.5%;
+}
+
+.game .title {
+    display: block;
+    
+    padding: 0.5% 3%;
+    
+    font-weight: bold;
+    font-size: 2em;
+    
+    border-bottom-style: solid;
+    border-bottom-color: var(--game-color);
+    border-bottom-width: var(--block-border-width);
+    
+}
+
+.team::before {
+    display: block;
+    text-decoration: underline;
+    content: "Team:";
+}
+.tags::before {
+    display: block;
+    text-decoration: underline;
+    content: "Tags:";
+}
+
+.game .details {
+    display: block;
+    padding: 0 2em;
+}
+
+.game .widget {
+    display: block;
+    
+    margin: 0.5%;
+    padding: 0.5%;
+    
+    text-align: center;
+    vertical-align: middle;
+    
+    float: left;
+}
+
+.game .cover_image {
+    display: block;
+    
+    margin: auto;
+    width: var(--img-width);
+    height: var(--img-height);
+    
+    background: url("/res/blank.png") center no-repeat;
+    background-size: 100% 100%;
+    
+    border-style: solid;
+    border-radius: 7%;
+    border-width: 1px;
+    border-color: var(--global-color);
+    
+    vertical-align: middle;
+}
+
+.game .widget .button {
+    width: 30%;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+
+    background-color: var(--button-color);
+    
+    color: var(--button-textcolor);
+    font-weight: bold;
+    font-size: 1.25em;
+    
+    border-style: solid;
+    border-radius: 7%;
+    border-width: 2px;
+    border-color: var(--button-bordercolor);
+    
+    padding: 2%;
+    margin: 2%;
+    
+    text-align: center;
+}
+
+.button:hover {
+    background-color: var(--button-hover-color);
+    border-color: var(--button-hover-bordercolor);
+    color: var(--button-hover-textcolor);
+}
+
+.button:active {
+    background-color: var(--button-active-color);
+    border-color: var(--button-active-bordercolor);
+    color: var(--button-active-textcolor);
+}
+
+.game .text {
+    display: block;
+    
+    margin: 3%;
+    
+    clear: left;
+}
+
+@media only screen and (max-width: 420px) {
+    :root {
+        --img-width: 116.676px;
+        --img-height: 87.507px;
+    }
+    
+    .game .details {
+        clear: both;
+        min-width: auto;
+    }
+    
+    .game .widget {
+        width: 100%;
+    }
+    
+    .game .widget .button {
+        clear: right;
+    }
+    .game .widget .cover_image {
+        float: left;
+        width: 60%;
+        padding-top: 45%;
+    }
+}
+
+@media only screen and (max-width: 240px) {
+    .game .widget .button {
+        clear: initial;
+    }
+    .game .widget .cover_image {
+        clear: both;
+        float: initial;
+        width: 100%;
+        padding-top: 75%;
+    }
+}
+
+.templates {
+    display: none;
+    visibility: hidden;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}

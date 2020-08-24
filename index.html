@@ -1,14 +1,46 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="/lib/style.css">
+    
+    <script type="text/javascript" src="/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    </style>
+</head>
 <body>
-    <center>
-    <h1>Test!</h1>
-    </center>
+    <center><h1>Games Test!</h1></center>
+    <hr />
+    <div class="templates">
+        <div class="game" name="template">
+            <div class="title">[TITLE] Lorem ipsum</div>
+            <div class="widget">
+                <picture class="cover_image"></picture>
+                <a class="page_link button">Play</a>
+                <a class="src_link button">Code</a>
+            </div>
+            <p class="team details">SedCommodo, LoremVitae, FinibusSagittis, Pellentesque</p>
+            <p class="tags details">#lorem, #ipsum, #dolor, #sit-amet, #consectetur, #adipiscing, #elit, #proin</p>
+            <p class="description text">[description]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu arcu ac lacus vestibulum pharetra sed vel urna. Morbi a interdum magna, eget mattis mi. Nam volutpat congue sapien quis cursus. Fusce tristique libero nulla, at condimentum ipsum porta rhoncus. Suspendisse vulputate justo a fringilla feugiat. Mauris augue neque, suscipit ac nunc lobortis, tristique maximus purus. Etiam ut nunc eu augue ultricies suscipit. Quisque nulla lectus, ultricies a risus eget, aliquam aliquet elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec semper mi sit amet arcu ornare, egestas volutpat sapien pellentesque. Curabitur scelerisque est quis tellus pretium fermentum. Pellentesque iaculis arcu at mauris vestibulum maximus. Morbi nec accumsan tellus. Nullam eget enim quis odio venenatis ullamcorper. Etiam scelerisque, urna vel laoreet egestas, massa sem auctor tellus, a euismod tellus lectus ac nunc.</p>
+            <p class="work text">[work]Sed commodo lorem vitae finibus sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis suscipit aliquet feugiat. Aliquam viverra ac augue vitae laoreet. Quisque sed egestas diam, sed imperdiet massa. Nam quis tristique tortor. Aenean aliquet sodales ipsum, nec tristique nisl condimentum et.</p>
+        </div>
+    </div>
+    <div align="center" class="page">
+    </div>
+    <script>
+        let template = $(".templates .game");
+        
+        $(".page").append(
+            template.clone(),
+            template.clone(),
+            template.clone(),
+            template.clone(),
+            template.clone()
+            );
+    </script>
 </body>
 </html>
