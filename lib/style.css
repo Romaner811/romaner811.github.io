@@ -53,8 +53,20 @@ body {
     color: var(--global-color);
 }
 
+.game_book {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex: 0;
+    justify-content: center;
+}
+
+.game_page {
+    display: block;
+}
+
 .game {
-    display: inline-block;
+    display: block;
     
     margin: 0.2cm;
     
@@ -101,6 +113,7 @@ body {
 .game .details {
     display: block;
     padding: 0 2em;
+    margin: 1em;
 }
 
 .game .widget {

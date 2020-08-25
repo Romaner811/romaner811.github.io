@@ -5,5 +5,6 @@ var tag = {
     event: { jam: "game-jam" },
     dim: { 2: "2D", 3: "3D" },
     art: { pixel: "pixel-art", primitive: "primitive-shapes" },
-    team: { solo: "solo", team: "team" }
+    team: { solo: "solo", team: "team" },
+    genre: { puzzle: "puzzle", shooter: "shooter", topdown: "top-down" }
 };

@@ -1,7 +1,10 @@
 'use strict';
 
-var collabs = {
-    "romaner811": {
+var collabs = { }
+
+let collabs_list = [
+    {
+        id: "Romaner811",
         name: "Roman Kuzminsky",
         link: {
             github: "https://github.com/romaner811",
@@ -16,7 +19,8 @@ var collabs = {
         ]
     },
     
-    "nir9000": {
+    {
+        id: "Nir9000",
         name: "Nir Zaid",
         link: {
             itch: "https://nir-zaid.itch.io/",
@@ -32,7 +36,8 @@ var collabs = {
         ]
     },
     
-    "iDoTea": {
+    {
+        id: "IdoToov",
         name: "Ido Toov",
         link: {
             portfolio: "https://www.idotoov.com/portfolio",
@@ -45,16 +50,22 @@ var collabs = {
         ]
     },
     
-    "Yedelstein": {
+    {
+        id: "Yedelstein",
         name: "Yehuda Edelstein",
         link: {
             itch: "https://dmfr56.itch.io/",
-        }
+        },
         skills: [
             skill.other.gd,
             
             skill.tech.unity,
             skill.tech.csharp
         ]
-    },
-};
+    }
+];
+
+for (let i = 0; i < collabs_list.length; i++)
+{
+    collabs[collabs_list[i].id] = collabs_list[i];
+}
