@@ -36,8 +36,6 @@
     --button-active-color: var(--button-hover-textcolor);
     --button-active-bordercolor: var(--button-hover-color);
     --button-active-textcolor: var(--button-hover-color);
-    
-    --banner-img: url("https://img.itch.zone/aW1nLzM5NTYzMDEuZ2lm/original/ftemxM.gif");
 }
 
 * {
@@ -58,7 +56,10 @@ body {
 }
 
 .banner_bg {
-    background: black var(--banner-img) no-repeat center;
+    background-color: black;
+    background-image: url("/res/banner-right.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
     background-size: 100vmax;
     
     border-style: solid;
@@ -69,26 +70,51 @@ body {
 header {
     display: block;
     margin: 0;
-    padding: 3em 0;
+    /*padding: 3em 0;*/
 
     margin-bottom: 2em;
     border-bottom-width: 0.1em !important;
+    
+    background-position: 50% 20% !important;
 }
 
 footer {
     display: block;
     margin: 0;
-    padding: 1em 0;
+    /*padding: 1em 0;*/
     
     margin-top: 2em;
     border-top-width: 0.1em !important;
+    
+    background-position: 50% 85% !important;
 }
 
 footer .text, header .text {
-    display: block;
+    display: inline-block;
     margin: 0;
     padding: 1em 2em;
-    background-image: linear-gradient(to right, black, transparent, black);
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.6) 80%,
+        transparent
+    );
+}
+
+a:link {
+    color: var(--global-color);
+    font-weight: bold;
+    text-decoration: underline;
+}
+a:visited {
+    color: var(--global-color);
+    font-weight: normal;
+}
+a:hover {
+    text-decoration: none;
+}
+a:active {
+    font-style: italic;
+    text-decoration: none;
 }
 
 .game_book {
@@ -194,16 +220,16 @@ footer .text, header .text {
     display: inline-block;
     text-decoration: none;
 
-    background-color: var(--button-color);
-    
-    color: var(--button-textcolor);
     font-weight: bold;
     font-size: 1.25em;
     
     border-style: solid;
     border-radius: 0.5em;
-    border-width: 2px;
-    border-color: var(--button-bordercolor);
+    border-width: 0.2em;
+    
+    background-color: var(--global-color);
+    color: var(--global-backcolor);
+    border-color: var(--global-color);
     
     padding: 2%;
     margin: 2%;
@@ -212,12 +238,25 @@ footer .text, header .text {
 }
 
 .button:hover {
+    background-color: var(--global-backcolor);
+    color: var(--global-color);
+    border-color: var(--global-backcolor);
+}
+.button:active {
+    border-color: var(--global-color);
+}
+
+.game .button:link, .game .button:visited {
+    background-color: var(--button-color);
+    color: var(--button-textcolor);
+    border-color: var(--button-bordercolor);
+}
+.game .button:hover {
     background-color: var(--button-hover-color);
     border-color: var(--button-hover-bordercolor);
     color: var(--button-hover-textcolor);
 }
-
-.button:active {
+.game .button:active {
     background-color: var(--button-active-color);
     border-color: var(--button-active-bordercolor);
     color: var(--button-active-textcolor);
