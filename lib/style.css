@@ -76,6 +76,8 @@ header {
     border-bottom-width: 0.1em !important;
     
     background-position: 50% 20% !important;
+    
+    height: 30vh;
 }
 
 footer {
@@ -87,6 +89,8 @@ footer {
     border-top-width: 0.1em !important;
     
     background-position: 50% 85% !important;
+    
+    height: 7.5vh;
 }
 
 footer .text, header .text {
@@ -94,8 +98,8 @@ footer .text, header .text {
     margin: 0;
     padding: 1em 2em;
     background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.6) 80%,
+        to bottom right,
+        rgba(0, 0, 0, 0.8),
         transparent
     );
 }
