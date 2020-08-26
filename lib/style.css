@@ -241,6 +241,10 @@ a:active {
     text-align: center;
 }
 
+.button:link, .button:visited, .button:hover, .button:active {
+    text-decoration: none;
+}
+
 .button:hover {
     background-color: var(--global-backcolor);
     color: var(--global-color);
