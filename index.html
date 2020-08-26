@@ -20,11 +20,25 @@
     <!-- /data -->
 </head>
 <body>
+    <header>
     <center><h1>Lorem ipsum!</h1></center>
     <hr />
+    </header>
+    
+    <article>
+    <div class="game_book">
+        <section><div class="game_page" name="under-pressure"></div></section>
+        <section><div class="game_page" name="OutOfCoinTroll"></div></section>
+        <section><div class="game_page" name="rc-kl"></div></section>
+        <section><div class="game_page" name="TreeInArrow"></div></section>
+    </div>
+    </article>
+    
     <div class="templates">
         <div class="game" name="template">
-            <div class="title">Lorem ipsum</div>
+            <div class="header">
+                <div class="title">Lorem ipsum</div>
+            </div>
             <div class="widget">
                 <picture class="cover_image"></picture>
                 <a class="play_link button" target="_blank" title="View game webpage">Play</a>
@@ -36,12 +50,7 @@
             <div class="work text">Sed commodo lorem vitae finibus sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis suscipit aliquet feugiat. Aliquam viverra ac augue vitae laoreet. Quisque sed egestas diam, sed imperdiet massa. Nam quis tristique tortor. Aenean aliquet sodales ipsum, nec tristique nisl condimentum et.</div>
         </div>
     </div>
-    <div class="game_book">
-        <div class="game_page" name="under-pressure"></div>
-        <div class="game_page" name="rc-kl"></div>
-        <div class="game_page" name="OutOfCoinTroll"></div>
-        <div class="game_page" name="TreeInArrow"></div>
-    </div>
+    
     <script type="text/javascript">
         let template = $(".templates .game[name=\"template\"]");
         
