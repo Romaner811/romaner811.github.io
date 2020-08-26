@@ -20,24 +20,27 @@
     <!-- /data -->
 </head>
 <body>
-    <header>
-    <center><h1>Lorem ipsum!</h1></center>
-    <hr />
+    <header class="banner_bg">
+        <div class="text">
+            <h1> Roman Kuzminsky </h1>
+            <h3> (a.k.a Romaner811) </h3>
+            <h2> &gt;&gt; Game Developer </h2>
+        </div>
     </header>
     
     <article>
-    <div class="game_book">
-        <section><div class="game_page" name="under-pressure"></div></section>
-        <section><div class="game_page" name="OutOfCoinTroll"></div></section>
-        <section><div class="game_page" name="rc-kl"></div></section>
-        <section><div class="game_page" name="TreeInArrow"></div></section>
-    </div>
+        <div class="game_book">
+            <section><div class="game_page" id="under-pressure"></div></section>
+            <section><div class="game_page" id="rc-kl"></div></section>
+            <section><div class="game_page" id="OutOfCoinTroll"></div></section>
+            <section><div class="game_page" id="TreeInArrow"></div></section>
+        </div>
     </article>
     
     <div class="templates">
-        <div class="game" name="template">
+        <div class="game">
             <div class="header">
-                <div class="title">Lorem ipsum</div>
+                <div class="title">Lorem impsum</div>
             </div>
             <div class="widget">
                 <picture class="cover_image"></picture>
@@ -48,11 +51,12 @@
             <div class="tags details">#lorem, #ipsum, #dolor, #sit-amet, #consectetur, #adipiscing, #elit, #proin</div>
             <div class="description text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu arcu ac lacus vestibulum pharetra sed vel urna. Morbi a interdum magna, eget mattis mi. Nam volutpat congue sapien quis cursus. Fusce tristique libero nulla, at condimentum ipsum porta rhoncus. Suspendisse vulputate justo a fringilla feugiat. Mauris augue neque, suscipit ac nunc lobortis, tristique maximus purus. Etiam ut nunc eu augue ultricies suscipit. Quisque nulla lectus, ultricies a risus eget, aliquam aliquet elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec semper mi sit amet arcu ornare, egestas volutpat sapien pellentesque. Curabitur scelerisque est quis tellus pretium fermentum. Pellentesque iaculis arcu at mauris vestibulum maximus. Morbi nec accumsan tellus. Nullam eget enim quis odio venenatis ullamcorper. Etiam scelerisque, urna vel laoreet egestas, massa sem auctor tellus, a euismod tellus lectus ac nunc.</div>
             <div class="work text">Sed commodo lorem vitae finibus sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis suscipit aliquet feugiat. Aliquam viverra ac augue vitae laoreet. Quisque sed egestas diam, sed imperdiet massa. Nam quis tristique tortor. Aenean aliquet sodales ipsum, nec tristique nisl condimentum et.</div>
+            <div class="extra text">Sed commodo lorem vitae finibus sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis suscipit aliquet feugiat. Aliquam viverra ac augue vitae laoreet. Quisque sed egestas diam, sed imperdiet massa. Nam quis tristique tortor. Aenean aliquet sodales ipsum, nec tristique nisl condimentum et.</div>
         </div>
     </div>
     
     <script type="text/javascript">
-        let template = $(".templates .game[name=\"template\"]");
+        let template = $(".templates .game");
         
         function getGameInfo(name) {
             let game_info = null;
@@ -72,12 +76,11 @@
         function processGamePage(jq_page) {
             console.log("processing", jq_page);
             
-            let game_info = getGameInfo(jq_page.attr("name"));
+            let game_info = getGameInfo(jq_page.attr("id"));
             let game = new GamePage(game_info);
             
             game.onReady(function() {
                 let page = game.generate(template);
-                //jq_page.replaceWith(page);
                 jq_page.append(page);
             });
             
@@ -88,11 +91,20 @@
             });
         }
         
-        console.log($(".game_book .game_page[name]"));
-        
-        $(".game_book .game_page[name]").each(function(i, elem) {
+        $(".game_book .game_page[id]").each(function(i, elem) {
             processGamePage($(elem));
         });
     </script>
+    
+    <footer class="banner_bg">
+        <div class="text">
+            Fun fact: this page was built by
+            <a
+                href="https://github.com/Romaner811/romaner811.github.io"
+                target="_blank"
+            >Romaner811</a>
+            in 5 days.
+        </div>
+    </footer>
 </body>
 </html>

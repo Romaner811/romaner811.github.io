@@ -17,7 +17,7 @@
         4w = 466.704
     */
     
-    --global-backcolor: #111;
+    --global-backcolor: #222;
     --global-color: #eee;
     
     --game-backcolor: #040;
@@ -36,6 +36,8 @@
     --button-active-color: var(--button-hover-textcolor);
     --button-active-bordercolor: var(--button-hover-color);
     --button-active-textcolor: var(--button-hover-color);
+    
+    --banner-img: url("https://img.itch.zone/aW1nLzM5NTYzMDEuZ2lm/original/ftemxM.gif");
 }
 
 * {
@@ -51,6 +53,42 @@
 body {
     background: var(--global-backcolor);
     color: var(--global-color);
+    padding: 0;
+    margin: 0;
+}
+
+.banner_bg {
+    background: black var(--banner-img) no-repeat center;
+    background-size: 100vmax;
+    
+    border-style: solid;
+    border-color: var(--global-color);
+    border-width: 0;
+}
+
+header {
+    display: block;
+    margin: 0;
+    padding: 3em 0;
+
+    margin-bottom: 2em;
+    border-bottom-width: 0.1em !important;
+}
+
+footer {
+    display: block;
+    margin: 0;
+    padding: 1em 0;
+    
+    margin-top: 2em;
+    border-top-width: 0.1em !important;
+}
+
+footer .text, header .text {
+    display: block;
+    margin: 0;
+    padding: 1em 2em;
+    background-image: linear-gradient(to right, black, transparent, black);
 }
 
 .game_book {
