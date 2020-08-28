@@ -1,6 +1,6 @@
 :root {
     /* font-family: Veranda, sans-serif; */
-    font-family: monospace;
+    font-family: Calibri, sans-serif;
     
     --img-width: 233.352px;
     --img-height: 175.014px;
@@ -17,11 +17,11 @@
         4w = 466.704
     */
     
-    --global-backcolor: #222;
+    --global-backcolor: #e8dfdf;
     --global-color: #eee;
     
-    --game-backcolor: #040;
-    --game-color: #0d0;
+    --game-backcolor: #abafb5;
+    --game-color: #000;
     --game-brightcolor: #0f0;
     
     /** button: **/
@@ -102,6 +102,8 @@ footer .text, header .text {
         rgba(0, 0, 0, 0.8),
         transparent
     );
+    
+    font-family: monospace;
 }
 
 a:link {
