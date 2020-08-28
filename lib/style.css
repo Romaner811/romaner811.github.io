@@ -5,7 +5,7 @@
     --img-width: 233.352px;
     --img-height: 175.014px;
     --block-max-width: 466.704px;
-    --block-border-width: 2px;
+    --block-border-width: 0.17em;
     
     /*
         w = 280 * 41.67% = 116.676
@@ -70,7 +70,6 @@ body {
 header {
     display: block;
     margin: 0;
-    /*padding: 3em 0;*/
 
     margin-bottom: 2em;
     border-bottom-width: 0.1em !important;
@@ -83,7 +82,6 @@ header {
 footer {
     display: block;
     margin: 0;
-    /*padding: 1em 0;*/
     
     margin-top: 2em;
     border-top-width: 0.1em !important;
@@ -140,8 +138,6 @@ a:active {
     
     margin: 0.6em;
     
-    overflow: auto;
-    
     max-width: var(--block-max-width);
     
     text-align: left;
@@ -184,26 +180,34 @@ a:active {
 
 .game .details {
     display: block;
-    padding: 0 2em;
+    
+    margin: 1em 2em;
+    
+    clear: right;
+}
+
+.game .text {
+    display: block;
+    
     margin: 1em;
+    
+    clear: both;
 }
 
 .game .widget {
     display: block;
     
-    margin: 0.5%;
-    padding: 0.5%;
+    margin: 0.3em;
     
     text-align: center;
-    vertical-align: middle;
     
     float: left;
+    clear: left;
 }
 
 .game .cover_image {
     display: block;
     
-    margin: auto;
     width: var(--img-width);
     height: var(--img-height);
     
@@ -272,14 +276,6 @@ a:active {
     color: var(--button-active-textcolor);
 }
 
-.game .text {
-    display: block;
-    
-    margin: 3%;
-    
-    clear: left;
-}
-
 @media only screen and (max-width: 420px) {
     :root {
         --img-width: 116.676px;
@@ -288,7 +284,6 @@ a:active {
     
     .game .details {
         clear: both;
-        min-width: auto;
     }
     
     .game .widget {
@@ -307,7 +302,7 @@ a:active {
 
 @media only screen and (max-width: 240px) {
     .game .widget .button {
-        clear: initial;
+        clear: both;
     }
     .game .widget .cover_image {
         clear: both;
