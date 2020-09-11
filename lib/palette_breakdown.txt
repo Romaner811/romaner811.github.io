@@ -1,0 +1,86 @@
+
+[
+    general
+    hf (header & footer)
+    desk
+    paper: [title, body]
+]
+X
+[
+    color (bg)
+    border
+    text: [text, link]
+    button: [idle, focus, click] X [color, text, border?]
+]
+
+
+inheritance:
+{
+    * everything inherites from general
+    * button status inherite prior order status (click -> focus -> idle)
+}
+
+general {
+    color:  transparent
+    border: transparent
+    text {
+        text:   ink
+        link:   ink-bright
+    }
+    
+    button {
+        idle {
+            color:  pen-dark
+            text:   pen-bright
+            border: pen-dark
+        }
+        focus {
+            color:  pen
+            text
+            border
+        }
+        click {
+            color
+            text
+            border: transparent
+        }
+    }
+}
+
+desk {
+    color: desk
+    border
+    text
+    button
+}
+
+hf {
+    color:  ink-bright
+    border: candle-light
+    text {
+        text:   candle-light
+        link:   candle
+    }
+    
+    button
+}
+
+paper {
+    title {
+        color:  scroll-dark
+        border: candle
+        text {
+            text:   ink-bright
+            link:   pen-dark
+        }
+        
+        button
+    }
+    body {
+        color:  scroll
+        border: candle
+        text
+        
+        button
+    }
+}

@@ -1,0 +1,99 @@
+:root {
+    --cp-debug: lime;
+}
+
+/** general **/
+:root {
+    /* color */
+    background-color: transparent;
+    /* border */
+    border-color: transparent;
+    /* text.text */
+    color: var(--cp-ink, var(--cp-debug, red));
+}
+*:link,
+*:hover,
+*:active,
+*:visited
+{
+    /* general.text.link */
+    color: var(--cp-ink-bright, var(--cp-debug, red));
+}
+/* button.idle */
+.button,
+.button *:link,
+.button *:visited {
+    /* color */
+    background-color: var(--cp-pen-dark, var(--cp-debug, red));
+    /* border */
+    border-color: var(--cp-pen-bright, var(--cp-debug, red));
+    /* text */
+    color: var(--cp-pen-bright, var(--cp-debug, red));
+}
+/* button.focus */
+.button *:hover {
+    color: var(--cp-pen, var(--cp-debug, red));
+}
+/* button.click */
+.button *:active {
+    border-color: transparent;
+}
+
+
+/** desk **/
+.desk {
+    /* color */
+    background-color: var(--cp-desk, var(--cp-debug, red));
+}
+
+/** hf **/
+header, footer {
+    /* color */
+    background-color: var(--cp-ink-bright, var(--cp-debug, red));
+    /* border */
+    border-color: var(--cp-candle-light, var(--cp-debug, red));
+    /* text */
+    color: var(--cp-candle-light, var(--cp-debug, red));
+}
+header .text,
+footer .text
+{
+    /* TODO: gradient. */
+    /* hf.color */
+}
+header *:link,     footer *:link,
+header *:hover,    footer *:hover,
+header *:active,   footer *:active,
+header *:visited,  footer *:visited
+{
+    /* hf.text.link */
+    color: var(--cp-candle, var(--cp-debug, red));
+}
+
+
+/** paper.body **/
+.paper {
+    /* color */
+    background-color: var(--cp-scroll, var(--cp-debug, red));
+    /* border */
+    border-color: var(--cp-candle, var(--cp-debug, red));
+}
+
+
+/** paper.title **/
+.paper .title {
+    /* color */
+    background-color: var(--cp-scroll-dark, var(--cp-debug, red));
+    /* border */
+    border-color: var(--cp-candle, var(--cp-debug, red));
+    /* text */
+    color: var(--cp-ink-bright, var(--cp-debug, red));
+}
+.paper .title *:link,
+.paper .title *:hover,
+.paper .title *:active,
+.paper .title *:visited
+{
+    /* general.text.link */
+    color: var(--cp-candle, var(--cp-debug, red));
+}
