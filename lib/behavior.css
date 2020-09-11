@@ -7,7 +7,7 @@ body {
 .banner_bg {
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 100vmax;
+    background-size: cover;
     
     border-width: 0;
 }
@@ -91,8 +91,9 @@ footer .text, header .text {
     width: var(--img-width);
     height: var(--img-height);
     
-    background: center no-repeat;
-    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     
     vertical-align: middle;
 }
