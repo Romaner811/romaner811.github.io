@@ -1,12 +1,13 @@
+
 :root {
-    --c-ink: #0a0905ff;
-    --c-ink-bright: #16220eff;
-    --c-pen: #513317ff;
-    --c-pen-bright: #c6833cff;
-    --c-pen-dark: #51311cff;
-    --c-scroll: #fffae6ff;
-    --c-scroll-dark: #fee7bdff;
-    --c-candle: #ffc96eff;
-    --c-candle-light: #fffeffff;
-    --c-desk: #c4651fff;
+    --cp-ink: #0a0905ff;
+    --cp-ink-bright: #16220eff;
+    --cp-pen: #513317ff;
+    --cp-pen-bright: #c6833cff;
+    --cp-pen-dark: #51311cff;
+    --cp-scroll: #fffae6ff;
+    --cp-scroll-dark: #fee7bdff;
+    --cp-candle: #ffc96eff;
+    --cp-candle-light: #fffeffff;
+    --cp-desk: #c4651fff;
 }
