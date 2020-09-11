@@ -1,0 +1,155 @@
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.banner_bg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100vmax;
+    
+    border-width: 0;
+}
+
+header.banner_bg {
+    display: block;
+    margin: 0;
+
+    background-position: 50% 20% !important;
+}
+
+footer.banner_bg {
+    display: block;
+    margin: 0;
+    
+    background-position: 50% 85% !important;
+}
+
+footer .text, header .text {
+    display: inline-block;
+    margin: 0;
+}
+
+.game_book {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex: 0;
+    justify-content: center;
+}
+
+.game_page {
+    display: block;
+}
+
+.game {
+    display: block;
+    
+    /* TODO: consider removing unnecessary allignment */
+    text-align: left;
+}
+
+.game .header {
+    display: block;
+}
+.game .title {
+    display: inline;
+}
+
+.team::before {
+    display: block;
+    content: "Team:";
+}
+.tags::before {
+    display: block;
+    content: "Tags:";
+}
+
+.game .details {
+    display: block;
+    clear: right;
+}
+
+.game .text {
+    display: block;
+    clear: both;
+}
+
+.game .widget {
+    display: block;
+    
+    text-align: center;
+    
+    float: left;
+    clear: left;
+}
+
+.game .cover_image {
+    display: block;
+    
+    width: var(--img-width);
+    height: var(--img-height);
+    
+    background: center no-repeat;
+    background-size: 100% 100%;
+    
+    vertical-align: middle;
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+}
+.game .widget .button {
+    width: 30%;
+    overflow: hidden;
+}
+
+
+@media only screen and (max-width: 420px) {
+    :root {
+        --img-width: 116.676px;
+        --img-height: 87.507px;
+    }
+    
+    .game .details {
+        clear: both;
+    }
+    
+    .game .widget {
+        width: 100%;
+    }
+    
+    .game .widget .button {
+        clear: right;
+    }
+    .game .widget .cover_image {
+        float: left;
+        width: 60%;
+        padding-top: 45%;
+    }
+}
+
+@media only screen and (max-width: 240px) {
+    .game .widget .button {
+        clear: both;
+    }
+    .game .widget .cover_image {
+        clear: both;
+        float: initial;
+        width: 100%;
+        padding-top: 75%;
+    }
+}
+
+.templates {
+    display: none;
+    visibility: hidden;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}

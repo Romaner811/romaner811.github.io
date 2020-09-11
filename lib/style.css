@@ -1,7 +1,9 @@
+/* TODO: enforce behavioral fields in behavior.css but control their value in style.css */
+
 :root {
-    /* font-family: Veranda, sans-serif; */
     font-family: Calibri, sans-serif;
     
+    /* TODO: deal with unnecessary variables? */
     --img-width: 233.352px;
     --img-height: 175.014px;
     --block-max-width: 466.704px;
@@ -16,101 +18,39 @@
         
         4w = 466.704
     */
-    
-    --global-backcolor: #e8dfdf;
-    --global-color: #eee;
-    
-    --game-backcolor: #abafb5;
-    --game-color: #000;
-    --game-brightcolor: #0f0;
-    
-    /** button: **/
-    --button-color: var(--game-color);
-    --button-bordercolor: var(--button-color);
-    --button-textcolor: var(--global-backcolor);
-    
-    --button-hover-color: var(--game-brightcolor);
-    --button-hover-bordercolor: var(--button-hover-color);
-    --button-hover-textcolor: var(--button-textcolor);
-    
-    --button-active-color: var(--button-hover-textcolor);
-    --button-active-bordercolor: var(--button-hover-color);
-    --button-active-textcolor: var(--button-hover-color);
 }
 
-* {
-    box-sizing: border-box;
-    
-    /* debug *
-    border-width: 3px;
-    border-style: solid;
-    border-color: rgba(90, 90, 90, 0.5);
-    /* /debug */
-}
-
-body {
-    background: var(--global-backcolor);
-    color: var(--global-color);
-    padding: 0;
-    margin: 0;
-}
 
 .banner_bg {
-    background-color: black;
-    background-image: url("/res/banner-right.gif");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 100vmax;
-    
     border-style: solid;
-    border-color: var(--global-color);
-    border-width: 0;
+    
+    background-image: url("/res/banner-right.gif");
 }
 
-header {
-    display: block;
-    margin: 0;
-
+header.banner_bg {
     margin-bottom: 2em;
     border-bottom-width: 0.1em !important;
     
-    background-position: 50% 20% !important;
-    
-    height: 30vh;
+    min-height: 30vh;
 }
 
-footer {
-    display: block;
-    margin: 0;
-    
+footer.banner_bg {
     margin-top: 2em;
     border-top-width: 0.1em !important;
     
-    background-position: 50% 85% !important;
-    
-    height: 7.5vh;
+    min-height: 7.5vh;
 }
 
 footer .text, header .text {
-    display: inline-block;
-    margin: 0;
     padding: 1em 2em;
-    background-image: linear-gradient(
-        to bottom right,
-        rgba(0, 0, 0, 0.8),
-        transparent
-    );
-    
-    font-family: monospace;
+    font-family: Consolas, monospace;
 }
 
 a:link {
-    color: var(--global-color);
     font-weight: bold;
     text-decoration: underline;
 }
 a:visited {
-    color: var(--global-color);
     font-weight: normal;
 }
 a:hover {
@@ -121,113 +61,58 @@ a:active {
     text-decoration: none;
 }
 
-.game_book {
-    display: inline-flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    flex: 0;
-    justify-content: center;
-}
-
-.game_page {
-    display: block;
-}
-
 .game {
-    display: block;
-    
     margin: 0.6em;
     
     max-width: var(--block-max-width);
     
-    text-align: left;
-    
-    background: var(--game-backcolor);
-    color: var(--game-color); 
-    
     border-style: solid;
-    border-color: var(--game-color);
     border-width: var(--block-border-width);
     border-radius: 1em;
 }
 
 .game .header {
-    display: block;
-    
     padding: 0.5% 3%;
     
     border-bottom-style: solid;
-    border-bottom-color: var(--game-color);
     border-bottom-width: var(--block-border-width);
 }
 .game .title {
-    display: inline;
-    
     font-weight: bold;
     font-size: 2em;
 }
 
 .team::before {
-    display: block;
     text-decoration: underline;
-    content: "Team:";
 }
 .tags::before {
-    display: block;
     text-decoration: underline;
-    content: "Tags:";
 }
 
 .game .details {
-    display: block;
-    
     margin: 1em 2em;
-    
-    clear: right;
 }
 
 .game .text {
-    display: block;
-    
     margin: 1em;
-    
-    clear: both;
 }
 
 .game .widget {
-    display: block;
-    
     margin: 0.3em;
-    
-    text-align: center;
-    
-    float: left;
-    clear: left;
+}
+
+.cover_image {
+    /* default */
+    background-image: url("/res/blank.png")
 }
 
 .game .cover_image {
-    display: block;
-    
-    width: var(--img-width);
-    height: var(--img-height);
-    
-    background: url("/res/blank.png") center no-repeat;
-    background-size: 100% 100%;
-    
     border-style: solid;
     border-radius: 1em;
     border-width: 1px;
-    border-color: var(--global-color);
-    
-    vertical-align: middle;
-}
-
-.game .widget .button {
-    width: 30%;
 }
 
 .button {
-    display: inline-block;
     text-decoration: none;
 
     font-weight: bold;
@@ -237,90 +122,14 @@ a:active {
     border-radius: 0.5em;
     border-width: 0.2em;
     
-    background-color: var(--global-color);
-    color: var(--global-backcolor);
-    border-color: var(--global-color);
-    
     padding: 2%;
     margin: 2%;
-    
-    text-align: center;
 }
-
 .button:link, .button:visited, .button:hover, .button:active {
     text-decoration: none;
     font-weight: bold;
     font-style: normal;
 }
 
-.button:hover {
-    background-color: var(--global-backcolor);
-    color: var(--global-color);
-    border-color: var(--global-backcolor);
-}
-.button:active {
-    border-color: var(--global-color);
-}
 
-.game .button:link, .game .button:visited {
-    background-color: var(--button-color);
-    color: var(--button-textcolor);
-    border-color: var(--button-bordercolor);
-}
-.game .button:hover {
-    background-color: var(--button-hover-color);
-    border-color: var(--button-hover-bordercolor);
-    color: var(--button-hover-textcolor);
-}
-.game .button:active {
-    background-color: var(--button-active-color);
-    border-color: var(--button-active-bordercolor);
-    color: var(--button-active-textcolor);
-}
 
-@media only screen and (max-width: 420px) {
-    :root {
-        --img-width: 116.676px;
-        --img-height: 87.507px;
-    }
-    
-    .game .details {
-        clear: both;
-    }
-    
-    .game .widget {
-        width: 100%;
-    }
-    
-    .game .widget .button {
-        clear: right;
-    }
-    .game .widget .cover_image {
-        float: left;
-        width: 60%;
-        padding-top: 45%;
-    }
-}
-
-@media only screen and (max-width: 240px) {
-    .game .widget .button {
-        clear: both;
-    }
-    .game .widget .cover_image {
-        clear: both;
-        float: initial;
-        width: 100%;
-        padding-top: 75%;
-    }
-}
-
-.templates {
-    display: none;
-    visibility: hidden;
-    overflow: hidden;
-    width: 0;
-    height: 0;
-    border: 0;
-    padding: 0;
-    margin: 0;
-}
