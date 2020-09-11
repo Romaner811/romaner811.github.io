@@ -32,7 +32,7 @@ footer .text, header .text {
 }
 
 .game_book {
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     flex: 0;
