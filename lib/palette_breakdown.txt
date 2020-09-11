@@ -30,19 +30,19 @@ general {
     
     button {
         idle {
-            color:  pen-dark
-            text:   pen-bright
+            color:  pen
             border: pen-dark
+            text:   pen-bright
         }
         focus {
-            color:  pen
-            text
-            border
+            color:  pen-bright
+            border: pen
+            text:   candle
         }
         click {
-            color
-            text
-            border: transparent
+            color:  candle
+            border: pen-bright
+            text:   candle-light
         }
     }
 }
