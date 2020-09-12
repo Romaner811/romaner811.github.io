@@ -21,27 +21,27 @@
 }
 
 
-.banner_bg {
+.banner {
     border-style: solid;
     
     background-image: url("/res/banner-right.gif");
 }
 
-header.banner_bg {
-    margin-bottom: 2em;
+header.banner {
     border-bottom-width: 0.1em !important;
-    
-    min-height: 30vh;
+}
+header.banner .container {
+    min-height: 40vh;
 }
 
-footer.banner_bg {
-    margin-top: 2em;
+footer.banner {
     border-top-width: 0.1em !important;
-    
-    min-height: 7.5vh;
+}
+footer.banner .container {
+    min-height: 10vh;
 }
 
-footer .text, header .text {
+.banner .text {
     padding: 1em 2em;
     font-family: Consolas, monospace;
 }
@@ -59,6 +59,10 @@ a:hover {
 a:active {
     font-style: italic;
     text-decoration: none;
+}
+
+.game_book {
+    padding: 1em 0;
 }
 
 .game {
