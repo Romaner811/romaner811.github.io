@@ -80,6 +80,7 @@ a:active {
     
     border-bottom-style: solid;
     border-bottom-width: var(--block-border-width);
+    border-radius: 1em 1em 0 0;
 }
 .game .title {
     font-weight: bold;
