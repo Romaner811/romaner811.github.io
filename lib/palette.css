@@ -1,6 +1,3 @@
-:root {
-    --cp-debug: lime;
-}
 
 /** general **/
 :root {
@@ -9,106 +6,108 @@
     /* border */
     border-color: transparent;
     /* text.text */
-    color: var(--cp-ink, var(--cp-debug, red));
+    color: var(--cp-ink, magenta);
 }
+a,
 a:link,
 a:hover,
 a:active,
 a:visited
 {
     /* general.text.link */
-    color: var(--cp-ink-bright, var(--cp-debug, red));
+    color: var(--cp-ink-bright, magenta);
 }
 /* button.idle */
 .button,
 .button:link,
-.button:visited,
-.button:hover,
-.button:active
+.button:visited
 {
     /* color */
-    background-color: var(--cp-pen, var(--cp-debug, red));
+    background-color: var(--cp-pen, magenta);
     /* border */
-    border-color: var(--cp-pen-dark, var(--cp-debug, red));
+    border-color: var(--cp-pen-dark, magenta);
     /* text */
-    color: var(--cp-pen-bright, var(--cp-debug, red));
+    color: var(--cp-pen-bright, magenta);
 }
 /* button.focus */
-.button:hover,
-.button:active
-{
+.button:hover {
     /* color */
-    background-color: var(--cp-pen-bright, var(--cp-debug, red));
+    background-color: var(--cp-pen-bright, magenta);
     /* border */
-    border-color: var(--cp-pen, var(--cp-debug, red));
+    border-color: var(--cp-pen, magenta);
     /* text */
-    color: var(--cp-candle, var(--cp-debug, red));
+    color: var(--cp-candle, magenta);
 }
 /* button.click */
 .button:active {
     /* color */
-    background-color: var(--cp-candle, var(--cp-debug, red));
+    background-color: var(--cp-candle, magenta);
     /* border */
-    border-color: var(--cp-pen-bright, var(--cp-debug, red));
+    border-color: var(--cp-pen-bright, magenta);
     /* text */
-    color: var(--cp-candle-light, var(--cp-debug, red));
+    color: var(--cp-candle-light, magenta);
 }
 
 
 /** desk **/
 .desk {
     /* color */
-    background-color: var(--cp-desk, var(--cp-debug, red));
+    background-color: var(--cp-desk, magenta);
 }
 
 /** hf **/
-header, footer {
+.banner {
     /* color */
-    background-color: var(--cp-ink-bright, var(--cp-debug, red));
+    background-color: var(--cp-ink-bright, magenta);
     /* border */
-    border-color: var(--cp-candle-light, var(--cp-debug, red));
+    border-color: var(--cp-candle-light, magenta);
     /* text */
-    color: var(--cp-candle-light, var(--cp-debug, red));
+    color: var(--cp-candle-light, magenta);
 }
-header .text,
-footer .text
-{
-    /* TODO: gradient. */
+.banner .container {
     /* hf.color */
+    background-image: linear-gradient(
+        to right,
+        transparent -10%,
+        var(--cp-ink-bright, magenta) 2em,
+        transparent
+    );
 }
-header a:link,     footer a:link,
-header a:hover,    footer a:hover,
-header a:active,   footer a:active,
-header a:visited,  footer a:visited
+.banner a,
+.banner a:link,
+.banner a:hover,
+.banner a:active,
+.banner a:visited
 {
     /* hf.text.link */
-    color: var(--cp-candle, var(--cp-debug, red));
+    color: var(--cp-candle, magenta);
 }
 
 
 /** paper.body **/
 .paper {
     /* color */
-    background-color: var(--cp-scroll, var(--cp-debug, red));
+    background-color: var(--cp-scroll, magenta);
     /* border */
-    border-color: var(--cp-candle, var(--cp-debug, red));
+    border-color: var(--cp-candle, magenta);
 }
 
 
 /** paper.title **/
 .paper .title {
     /* color */
-    background-color: var(--cp-scroll-dark, var(--cp-debug, red));
+    background-color: var(--cp-scroll-dark, magenta);
     /* border */
-    border-color: var(--cp-candle, var(--cp-debug, red));
+    border-color: var(--cp-candle, magenta);
     /* text */
-    color: var(--cp-ink-bright, var(--cp-debug, red));
+    color: var(--cp-ink-bright, magenta);
 }
+.paper .title a,
 .paper .title a:link,
 .paper .title a:hover,
 .paper .title a:active,
 .paper .title a:visited
 {
     /* general.text.link */
-    color: var(--cp-candle, var(--cp-debug, red));
+    color: var(--cp-candle, magenta);
 }
