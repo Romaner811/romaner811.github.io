@@ -24,21 +24,21 @@
 .banner {
     border-style: solid;
     
-    background-image: url("/res/banner-right.gif");
+    background-image: url("/res/banner.png");
 }
 
 header.banner {
     border-bottom-width: 0.1em !important;
 }
 header.banner .container {
-    min-height: 40vh;
+    min-height: 30vh;
 }
 
 footer.banner {
     border-top-width: 0.1em !important;
 }
 footer.banner .container {
-    min-height: 10vh;
+    min-height: 7.5vh;
 }
 
 .banner .text {

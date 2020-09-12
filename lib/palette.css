@@ -68,8 +68,7 @@ a:visited
     /* hf.color */
     background-image: linear-gradient(
         to right,
-        transparent -10%,
-        var(--cp-ink-bright, magenta) 2em,
+        var(--cp-ink-bright, magenta) -10%,
         transparent
     );
 }
