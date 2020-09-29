@@ -46,8 +46,8 @@ let games_list = [
         extra: `
         also:
         <ul>
-        <li> @Nir9000 - delicate game&amp;level design, amazing pixel-art, and actually
-             most of the programming too. </li>
+        <li> @Nir9000 - delicate game&amp;level design, amazing pixel-art,
+             and lots of programming too. </li>
         <li> @IdoToov - audio designed, composed and integrated everything you
              can hear. <br />
              (note: has experience with unreal, his first time with unity!)
