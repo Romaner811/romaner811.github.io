@@ -81,7 +81,16 @@ a:visited
     /* hf.text.link */
     color: var(--cp-candle, magenta);
 }
-
+header.banner  a,
+header.banner  a:link,
+header.banner  a:active,
+header.banner  a:visited {
+    color: inherit;
+}
+header.banner  a:hover {
+    /* hf.text.link */
+    color: var(--cp-candle, magenta);
+}
 
 /** paper.body **/
 .paper {

@@ -12,6 +12,7 @@ let collabs_list = [
             linkedin: "https://www.linkedin.com/in/romaner811",
             portfolio: "https://romaner811.github.io/"
         },
+        default_link_type: "linkedin",
         skills: [
             skill.tech.unity,
             skill.tech.csharp,
@@ -43,6 +44,7 @@ let collabs_list = [
             portfolio: "https://www.idotoov.com/portfolio",
             linkedin: "https://www.linkedin.com/in/ido-toov/"
         },
+        default_link_type: "linkedin",
         skills: [
             skill.audio.design,
             skill.audio.music,

@@ -26,9 +26,36 @@
 <body class="desk">
     <header class="banner">
         <div class="container"><div class="text">
-            <h1> Roman Kuzminsky </h1>
-            <h3> (a.k.a Romaner811) </h3>
-            <h2> &gt;&gt; Game Developer </h2>
+            <h1>
+                <a
+                    href="##link/Romaner811/linkedin"
+                    target="_blank"
+                    class="collab_link"
+                    title="linkedin"
+                >
+                    Roman Kuzminsky
+                </a>
+            </h1>
+            <h3>
+                (a.k.a
+                <a
+                    href="##link/Romaner811/github"
+                    target="_blank"
+                    class="collab_link"
+                    title="github"
+                >
+                Romaner811</a>)
+            </h3>
+            <h2>
+                <a
+                    href="##link/Romaner811/itch"
+                    target="_blank"
+                    class="collab_link"
+                    title="itch"
+                >
+                    &gt;&gt; Game Developer
+                </a>
+            </h2>
         </div></div>
     </header>
     
@@ -59,7 +86,18 @@
         </div>
     </div>
     
-    <script type="text/javascript">
+    <footer class="banner">
+        <div class="container"><div class="text">
+            Fun fact: this page was built from zero by (c)
+            <a
+                href="https://github.com/Romaner811/romaner811.github.io"
+                target="_blank"
+            >Romaner811</a>.
+        </div></div>
+    </footer>
+    
+    <!-- fills the papers with the actual content using a template -->
+    <script type="text/javascript" defer>
         let template = $(".templates .game");
         
         function getGameInfo(name) {
@@ -100,15 +138,32 @@
         });
     </script>
     
-    <footer class="banner">
-        <div class="container"><div class="text">
-            Fun fact: this page was built by (c)
-            <a
-                href="https://github.com/Romaner811/romaner811.github.io"
-                target="_blank"
-            >Romaner811</a>
-            in 5 days.
-        </div></div>
-    </footer>
+    <!-- replaces the link references with links from data -->
+    <script type="text/javascript" defer>
+        const LINK_PRIORITY = [
+            "portfolio",
+            "itch",
+            "github",
+            "linkedin"
+        ];
+        const LINKTYPE_ANY = "any";
+        
+        function getLinkInfo(link_elem) {
+            return {
+                id: link_elem.name || null,
+                link: link_elem.title || null
+            };
+        }
+        
+        function handleSingleCollabLink(link_elem) {
+            let info = getLinkInfo(link_elem);
+            let ref = GamePage.getCollabLinkRef(info.id, info.link);
+            link_elem.href = ref;
+            console.log("replaced collab link:", info, "->", ref);
+        }
+        
+        $("a.collab_link").each((i, elem) => handleSingleCollabLink(elem));
+    </script>
+    
 </body>
 </html>
