@@ -42,6 +42,12 @@ let games_list = [
         <li> use API for matrix integration. </li>
         <li> "pull-requesting" our efforts into the matrix' repository. </li>
         </ul>
+        <p> As of 30.09.2020 The united matrix game is not yet released,
+        but you can see a 
+        <a
+            href="https://www.dropbox.com/s/kd601klqqyexx7s/MatrixJamGamesShowcase.mp4?dl=0&fbclid=IwAR1q9AtXxA26r8kKQSI-Xcic95Ims4hfPnT_GHOOySsL0p_l3q2-Li41vnk"
+            target="_blank"
+        >showcase</a> of the other games for this jam. </p>
         `,
         extra: `
         also:
@@ -54,12 +60,6 @@ let games_list = [
         </li>
         <li> We all did early playtesting with friends and family :) </li>
         </ul>
-        <p> As of 26.08.2020 The united matrix game is not out yet released,
-        but you can see this 
-        <a
-            href="https://www.dropbox.com/s/kd601klqqyexx7s/MatrixJamGamesShowcase.mp4?dl=0&fbclid=IwAR1q9AtXxA26r8kKQSI-Xcic95Ims4hfPnT_GHOOySsL0p_l3q2-Li41vnk"
-            target="_blank"
-        >showcase</a> of other games for this jam. </p>
         `
     },
     
@@ -96,6 +96,10 @@ let games_list = [
         <li> Enemy Guns & Bullets </li>
         <li> Bullet pooling </li>
         </ul>
+        <p> See other games submitted for <a
+            href="https://itch.io/jam/jamuslala"
+            target="_blank"
+        >Jamuslala game jam</a>. </p>
         `,
         extra: `
         credis:
@@ -117,10 +121,6 @@ Music: 'Fueled By Fire' By OurMusicBox">
         >@Nir9000</a>
         and I were soloing in the
         GMTKJam2020.</p>
-        <p> See other games submitted for <a
-            href="https://itch.io/jam/jamuslala"
-            target="_blank"
-        >Jamuslala game jam</a>. </p>
         `
     },
     
@@ -189,7 +189,8 @@ Music: 'Fueled By Fire' By OurMusicBox">
         `,
         extra: `
         I stopped working and decided to get interviewer feedback before
-        continuing to bugfixing and polishing.
+        continuing to bugfixing and polishing, so the code remained kinda
+        clumsy.
         `
     },
 ];
