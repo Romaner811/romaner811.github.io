@@ -147,12 +147,23 @@
             "linkedin"
         ];
         const LINKTYPE_ANY = "any";
+        const RX_LINK = /##link\/(?<id>[\w\.\-]+)\/(?<link>\w+)/;
         
         function getLinkInfo(link_elem) {
-            return {
+            let rx_match = link_elem.href.match(RX_LINK);
+            
+            if (rx_match != null) {
+                return rx_match.groups;
+            } else {
+                return {
+                    id: link_elem.name || null,
+                    link: link_elem.title || null
+                };
+            }
+            /*return {
                 id: link_elem.name || null,
                 link: link_elem.title || null
-            };
+            };*/
         }
         
         function handleSingleCollabLink(link_elem) {
